@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1056284552029",
+    "firebase_url": "https://ifoto-bc5ee.firebaseio.com",
+    "project_id": "ifoto-bc5ee",
+    "storage_bucket": "ifoto-bc5ee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1056284552029:android:ab652dd912297c3fea96b4",
+        "android_client_info": {
+          "package_name": "com.example.photoblogapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1056284552029-jbebnkpjf53e5vmlfa1jog1j9d0f5ec8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.photoblogapp",
+            "certificate_hash": "0e31c3fdb42cabe3eb8be2cea451afadc95bca38"
+          }
+        },
+        {
+          "client_id": "1056284552029-e7dq85dasr8hajdkggl27rnrgs6abmdq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBO5Ei-xWbvar6D4ohRf59h4VY22dyy2qo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1056284552029-e7dq85dasr8hajdkggl27rnrgs6abmdq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
