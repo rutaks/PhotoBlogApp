@@ -7,23 +7,12 @@
     android:background="@color/colorPrimary"
     tools:context=".LoginActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="227dp"
-        android:layout_height="308dp"
-        android:layout_marginTop="24dp"
-        android:contentDescription="Logo Login View"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/IFOTO" />
-
     <EditText
         android:id="@+id/edit_text_login_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="33dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="8dp"
         android:autofillHints=""
         android:backgroundTint="@color/colorPrimaryDark"
@@ -33,7 +22,7 @@
         android:textColor="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/edit_text_login_password"
