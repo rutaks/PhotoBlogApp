@@ -33,7 +33,9 @@ public class LoginActivity extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
 
         setupForm();
-        loginButtonOnClick();
+        handleLoginButtonClicked();
+        handleGoToSignUpButtonClicked();
+        handleGoToSignUpButtonClicked();
     }
 
     @Override
@@ -49,20 +51,20 @@ public class LoginActivity extends AppCompatActivity {
      * are valid. Any Error Found Will be displayed as a Toast
      * @return      void
      */
-    public void loginButtonOnClick(){
+    public void handleLoginButtonClicked(){
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                progressBar.setVisibility(View.VISIBLE);
-
-                String email = editTextEmail.getText().toString();
-                String password = editTextEmail.getText().toString();
+                String email = editTextEmail.getText().toString().trim();
+                String password = editTextPassword.getText().toString().trim();
 
                 if (!email.isEmpty() && !password.isEmpty()){
+                    progressBar.setVisibility(View.VISIBLE);
                     auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful()){
+                                progressBar.setVisibility(View.INVISIBLE);
                                 goToMain();
                             } else {
                                 String message = task.getException().getMessage();
@@ -74,6 +76,21 @@ public class LoginActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(LoginActivity.this, "Make Sure All Fields Are Valid", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+    }
+
+    /**
+     * Go To Sign Up Button onClick Handler, will direct user to Signup View
+     * @return      void
+     */
+    private void handleGoToSignUpButtonClicked() {
+        buttonSignup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, SignupActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
     }
@@ -97,7 +114,7 @@ public class LoginActivity extends AppCompatActivity {
         editTextPassword = findViewById(R.id.edit_text_login_password);
         progressBar = findViewById(R.id.progressBar_login);
         buttonLogin = findViewById(R.id.button_login);
-        buttonSignup = findViewById(R.id.button_register);
+        buttonSignup = findViewById(R.id.button_signup);
     }
 
     /**

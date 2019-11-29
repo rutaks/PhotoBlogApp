@@ -8,7 +8,7 @@
     tools:context=".LoginActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageView_signup"
         android:layout_width="201dp"
         android:layout_height="198dp"
         android:layout_marginTop="45dp"
@@ -18,7 +18,7 @@
         app:srcCompat="@drawable/ifoto" />
 
     <EditText
-        android:id="@+id/edit_text_login_email"
+        android:id="@+id/edit_text_signup_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -33,10 +33,10 @@
         android:textColorHint="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView_signup" />
 
     <EditText
-        android:id="@+id/edit_text_login_password"
+        android:id="@+id/edit_text_signup_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -50,21 +50,24 @@
         android:textColorHint="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_text_login_email" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_text_signup_email" />
 
-    <Button
-        android:id="@+id/button_login"
+    <EditText
+        android:id="@+id/edit_text_signup_password_confirm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="33dp"
         android:layout_marginEnd="8dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="@string/login_btn_text"
-        android:textAllCaps="false"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:ems="10"
+        android:hint="@string/confirm_pass_hint"
+        android:inputType="textPassword"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorHint="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_text_login_password" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_text_signup_password" />
 
     <Button
         android:id="@+id/button_signup"
@@ -73,17 +76,31 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/signup_text"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_text_signup_password_confirm" />
+
+    <Button
+        android:id="@+id/button_go_to_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
         android:backgroundTint="@color/colorPrimary"
-        android:text="@string/goto_signup_text"
+        android:text="@string/goto_login_text"
         android:textAllCaps="false"
         android:textColor="@color/colorPrimaryDark"
         android:textColorHint="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_login" />
+        app:layout_constraintTop_toBottomOf="@+id/button_signup" />
 
     <ProgressBar
-        android:id="@+id/progressBar_login"
+        android:id="@+id/progressBar_signup"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
