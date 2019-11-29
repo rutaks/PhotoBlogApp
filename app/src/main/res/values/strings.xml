@@ -1,7 +1,13 @@
 <resources>
     <string name="app_name">PhotoBlogApp</string>
     <string name="pass_hint">Password...</string>
+    <string name="confirm_pass_hint">Confirm Password...</string>
     <string name="email_hint">Email...</string>
     <string name="login_btn_text">Login</string>
-    <string name="register_btn">Don\'t Have An Account? Sign Up</string>
+    <string name="goto_signup_text">Don\'t Have An Account? Sign Up</string>
+    <string name="signup_text">Sign Up</string>
+    <string name="goto_login_text">Already An Account? Sign Up</string>
+    <string name="action_search_text">Search</string>
+    <string name="action_account_settings">Account Settings</string>
+    <string name="action_logout_text">Logout</string>
 </resources>
