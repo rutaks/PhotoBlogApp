@@ -100,7 +100,7 @@
         app:layout_constraintTop_toBottomOf="@+id/button_signup" />
 
     <ProgressBar
-        android:id="@+id/progressBar_login"
+        android:id="@+id/progressBar_signup"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
