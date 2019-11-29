@@ -33,7 +33,22 @@ public class SignupActivity extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
 
         setupForm();
+
         handleSignUpButtonClicked();
+        handleGoToLoginButtonClicked();
+    }
+
+    /**
+     * Go to login Button onClick Handler, will return to previous view `Login View`
+     * @return      void
+     */
+    private void handleGoToLoginButtonClicked() {
+        buttonGoToLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     /**
@@ -58,7 +73,7 @@ public class SignupActivity extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 progressBar.setVisibility(View.INVISIBLE);
 
-                                if(task.isSuccessful()) goToMain();
+                                if(task.isSuccessful()) goToSetup();
                                 else {
                                     String message = task.getException().getMessage();
                                     Toast.makeText(SignupActivity.this, message, Toast.LENGTH_SHORT).show();
@@ -79,6 +94,16 @@ public class SignupActivity extends AppCompatActivity {
      */
     public void goToMain(){
         Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+    /**
+     * Directs User To Setup View in case of user registration success
+     * @return      void
+     */
+    public void goToSetup(){
+        Intent intent = new Intent(this, SetupActivity.class);
         startActivity(intent);
         finish();
     }
