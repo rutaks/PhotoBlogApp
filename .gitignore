@@ -12,3 +12,4 @@
 /captures
 .externalNativeBuild
 .cxx
+app/build/generated/res/google-services/debug/values

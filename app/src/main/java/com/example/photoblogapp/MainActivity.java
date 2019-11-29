@@ -28,11 +28,19 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Directs User To Login Form in case of user not logged in
+     * @return      void
+     */
     public void goToLogin(){
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }
 
+    /**
+     * Returns an indicator stating if user logged in or not
+     * @return      Boolean
+     */
     public Boolean isLoggedIn(){
         FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         return firebaseUser != null ? true : false;
