@@ -53,16 +53,17 @@ public class LoginActivity extends AppCompatActivity {
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                progressBar.setVisibility(View.VISIBLE);
-
                 String email = editTextEmail.getText().toString();
                 String password = editTextEmail.getText().toString();
 
                 if (!email.isEmpty() && !password.isEmpty()){
+                    progressBar.setVisibility(View.VISIBLE);
                     auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful()){
+                                System.out.println("worked");
+                                progressBar.setVisibility(View.INVISIBLE);
                                 goToMain();
                             } else {
                                 String message = task.getException().getMessage();
